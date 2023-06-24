@@ -1,0 +1,52 @@
+
+.container-sections{
+  position: relative;
+background: var(--grey-color);
+}
+
+.header{
+  background-color: var(--grey-color);
+}
+
+
+.backg-cont{
+  position: relative;
+}
+
+
+.destacados-container{
+ 
+}
+
+
+  .txt-rotate{
+    display: inline-block;
+    font-size: 60px;
+    font-weight: bold;
+  transform: rotate(90deg);
+  position: relative;
+  top: 165px;
+  left: -160px;
+  }
+
+p{
+
+    color: #fff;
+   line-height: 19px;
+}
+
+/*Slider*/
+
+.carousel-cont{
+  position: relative;
+top: 30px;
+}
+@media screen and (max-width: 768px){
+  .container-sections{
+    padding: 120px 30px;
+  }
+}
+
+
+
+

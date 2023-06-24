@@ -1,0 +1,123 @@
+<section id="single-product">
+<div class="row d-flex flex-column flex-md-row py-5 px-5">
+  <div class="col-12 col-md-7 p-0 img-product-principal" id="productImageContainer">
+      <img [src]="prenda?.imgUrl?.[selectedImageIndex || 0]" alt="" class="img-fluid" id="product-image">
+  </div>
+
+  <div class="col-12 col-md-5 prenda-info">
+    <div class="headline">
+      
+      <div class="world-logo-cont">
+        <img src="/assets/Images/worldLogo.png" alt="" class="logo-circular">
+      </div>
+
+      <h1 class="product-name">{{prenda?.nombre}}</h1>
+    </div>
+
+    <div class="precio-cuotas-cont">
+      <h4 class="price">$ {{prenda?.precio}}</h4>
+    </div>
+
+    <form [formGroup]="productForm" class="product-form">
+      <div class="talles-cont">
+<div class="txt-grey-cont">
+        <label for="talle" class="talle-cant-txt">Talle:</label>
+      </div>
+        <ul class="d-flex align-center p-0">
+          <li *ngFor="let talle of prenda?.talles">
+            <label class="label-radio-input" [for]="'talle-' + talle">
+              <input class="radio-input" [id]="'talle-' + talle" type="radio" name="talle" formControlName="talle" [value]="talle">
+              <div class="button">
+                {{talle}}
+              </div>
+            </label>
+          </li>
+        </ul>
+        <div *ngIf="productForm.controls['talle'].invalid && productForm.controls['talle'].touched"><span class="error-message">Debes seleccionar un talle</span></div>
+      </div>
+
+      <div class="cantidad-agregar-cont">
+        <div class="txt-grey-cont">
+<span class="talle-cant-txt">Cantidad</span>
+</div>
+        <div class="counter btn-group">
+          <button class="btn minus-btn" (click)="decrementCount()">-</button>
+          <input type="number" class="count btn btn-light" formControlName="cantidad">
+          <button class="btn plus-btn" (click)="incrementCount()">+</button>
+        </div>
+</div>
+     
+<div class="bttn mx-4" (click)="agregarAlCarrito()"><span>Agregar al carrito</span></div>
+
+    </form>
+  </div>
+</div>
+
+<div class="row d-flex justify-content-center mb-5">
+  <ngx-slick-carousel class="carousel" [config]="carouselConfig">
+    <div class="slide" *ngFor="let image of prenda?.imgUrl; let i = index;" (click)="scrollToTop()" [ngClass]="{ 'selected-image': i === selectedImageIndex }" ngxSlickItem>
+      <img [src]="image" alt="Preview Image" class="preview-image" (click)="selectImage(i)">
+    </div>
+  </ngx-slick-carousel>
+</div>
+
+<div class="row bg-grey">
+  <div class="prenda-description-cont d-flex flex-column flex-md-row">
+    <div class="col-12 col-md-4">
+      <h5>Descripción</h5>
+      <p class="desc-prenda">{{prenda?.descripcion}}</p>
+
+      <h5>Cuidados</h5>
+      <p class="desc-prenda">{{prenda?.cuidados}}</p>
+    </div>
+    <div class="col-12 col-md-8">
+      <table>
+        <tbody>
+          <tr>
+            <td>Talle</td>
+            <td>Ancho</td> 
+            <td>Largo</td> 
+            <td>Manga</td>
+          </tr>
+          <tr *ngFor="let talle of prenda?.talles">
+            <td>{{talle}}</td>
+            <ng-container *ngIf="talle === 'S'; else mediumBlock">
+              <td>80 cm</td>
+              <td>70 cm</td>
+              <td>55 cm</td>
+            </ng-container>
+            <ng-template #mediumBlock>
+              <ng-container *ngIf="talle === 'M'; else largeBlock">
+                <td>81 cm</td>
+                <td>76 cm</td>
+                <td>66 cm</td>
+              </ng-container>
+            </ng-template>
+            <ng-template #largeBlock>
+              <ng-container *ngIf="talle === 'L'; else extraBlock">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+              </ng-container>
+            </ng-template>
+            <ng-template #extraBlock>
+              <ng-container *ngIf="talle === 'XL'; else xxBlock">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+              </ng-container>
+            </ng-template>
+            <ng-template #xxBlock>
+              <ng-container *ngIf="talle === 'XXL';">
+                <td>Default Value 1</td>
+                <td>Default Value 2</td>
+                <td>Default Value 3</td>
+              </ng-container>
+            </ng-template>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</section>

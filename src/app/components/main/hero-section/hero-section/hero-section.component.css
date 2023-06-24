@@ -1,0 +1,144 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+    position: relative;
+      background-color: var(--grey-color);
+      overflow: hidden;
+      color: #000;
+    }
+
+.hero-add-bar{
+  position: relative;
+white-space: nowrap;
+height: 60px;
+display: flex;
+align-items: center;
+background-color: var(--grey-color-light);
+border-top: 2px solid #000;
+border-bottom: 2px solid #000;
+}
+
+.hero-add-bar p{
+  position: absolute;
+  color: #000;
+  font-size: 17px;
+  margin: 0;
+  user-select: none;
+}
+
+    .video-cont{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+  .brand-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px;
+    z-index: 10; 
+    position: relative;
+  }
+  .blessed-stickr{
+    width: 100%;
+    max-width: 550px;
+    min-width: 290px;
+  }
+
+  .register{
+      position: relative;
+      top: -3px;
+      width: 40px;
+      height: 40px;
+      border: 5px solid #fff;
+      margin-left: 4px;
+      
+    
+  }
+  
+  .register span{
+      font-size: 23px;
+  }
+  
+  h1{
+     font-size: 45px;
+     font-weight: bold;
+  }
+  
+
+
+
+video{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+opacity: .5;
+z-index: 2;
+
+}
+.txt-hero-cont{
+  bottom: 0;
+  z-index: 30;
+  padding: 15px 60px;
+  border-radius:40px;
+  text-align: start;
+
+}
+
+
+  .subtitle{
+    text-transform: uppercase;
+    z-index: 15; 
+  }
+
+  app-informative-banner{
+z-index: 60;
+  }
+
+  .custom-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+  }
+
+  .sticker{
+    z-index: 65;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+    width: clamp(130px,30vw ,215px);
+    height: auto;
+  }
+
+
+  @media screen and (max-width: 768px){
+    .video-cont{
+      height: 84vh;
+    }
+  }
+  
+  @media screen and (max-width: 425px){
+    .hero-add-bar{
+    height: 50px;
+    }
+    
+    .hero-add-bar p{
+      font-size: 15px;
+    }
+    .video-cont{
+      height: 70vh;
+    }
+    .sticker{
+      right: 10px;
+    }
+  
+  }

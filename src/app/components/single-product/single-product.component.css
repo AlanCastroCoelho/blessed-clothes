@@ -1,0 +1,512 @@
+
+*{
+    color: #000;
+}
+
+a{
+  color: blue;
+}
+
+#single-product{
+  background-color: var(--grey-color);
+}
+
+.img-product-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 669px;
+    overflow-y: hidden;
+    border: 2px solid #000;   
+}
+
+
+#product-image{
+    width: 535px;
+    height:auto;
+}
+
+.prenda-info{
+  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: #000;
+    padding:40px 0px;
+    border: 2px solid #000;   
+    border-left: 0;
+    background: linear-gradient(55deg, rgba(178,174,174,1) 0%, rgba(195,194,194,1) 59%);
+  }
+
+.headline{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+}
+
+.world-logo-cont{
+  width: fit-content;
+padding: 9px;
+border: 3px solid #000;
+border-radius: 50%;
+background-color: var(--primary-color);
+}
+
+.logo-circular{
+width: 52px;
+height: 52px;
+}
+
+.product-name{
+  text-align: center;
+  font-size: 50px;
+  margin: 30px 0;
+  font-weight: 600;
+}
+
+.precio-cuotas-cont{
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  width: 100%;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+padding: 11px 0;
+background: #C3C3C3;
+}
+
+.precio-cuotas-cont .price{
+  margin: 0;
+  font-size: 28px;
+}
+
+.product-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.txt-grey-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background: #C3C3C3;
+height: 100%;
+width: 45%;
+border-right: 2px solid #000;
+}
+
+.talles-cont{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  margin: 30px 0;
+  border-top:2px solid #000 ;
+  border-bottom:2px solid #000 ;
+  overflow: hidden;
+  background-color: #9E9E9E;
+}
+
+.talles-cont p{
+  text-transform: uppercase;
+}
+
+.talles-cont ul{
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+.error-message {
+  color: rgb(103, 2, 2);
+  margin-top: 5px;
+  font-size: 14px;
+}
+/****/
+
+.label {
+  position: relative;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+ font-size: 15px;
+ font-weight: 500;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.button::before {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.button::after {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.button:hover{
+  border: 1px solid grey;
+}
+
+.label-radio-input .radio-input {
+  display: none;
+}
+
+.label-radio-input input:checked + .button {
+  background: #000;
+  box-shadow: 0 10px 20px var(--primary-color);
+  color: #fff;
+}
+
+.label-radio-input input:checked + .button::before {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.label-radio-input input:checked + .button::after {
+  animation: pulse 1.5s infinite;
+}
+
+
+
+/**/
+
+.zoom-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: none;
+    pointer-events: none;
+  }
+  
+  .img-product-principal:hover .zoom-box {
+    display: block;
+  }
+
+  .carousel {
+    width: 80%;
+    display: flex;
+    overflow: hidden;
+
+  }
+  
+  .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 325px;
+    height: 407px;
+    overflow: hidden;
+    margin: 0 5px;
+  }
+
+  .preview-image {
+    width: 325px; /* Ajusta el tamaño de las imágenes de vista previa según tus necesidades */
+    height: auto;
+    /* Ajusta el margen entre las imágenes según tus necesidades */
+    cursor: pointer;
+  }
+
+
+  .selected-image {
+    position: relative;
+  }
+  
+  .selected-image::before {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Ajusta el valor según el grosor del borde */
+    left: 0px; /* Ajusta el valor según el grosor del borde */
+    right: 0px; /* Ajusta el valor según el grosor del borde */
+    top: auto;
+    border: 8px solid var(--primary-color);
+  }
+  
+  .cantidad-agregar-cont{
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+margin: 30px 0;
+width: 100%;
+border-top:2px solid #000 ;
+border-bottom:2px solid #000;
+background-color: #9E9E9E;
+  }
+
+
+.counter{
+  margin: auto;
+  width: 36%;
+  min-width: 100px;
+}
+
+.counter button{
+  background-color: #000;
+  color: #fff;
+}
+
+.counter{
+
+}
+
+.count{
+  background-color: var(--grey-color-light);
+  border: 0;
+}
+input[type="number"]{
+  width: 98px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+  .bttn{
+    position: absolute;
+    bottom: 40px;
+    height: 55px;
+    width: 240px;
+    white-space: nowrap;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+  background: #000;
+  cursor: pointer;
+  }
+  .bttn:hover{
+    background: #2d2d2d;
+  }
+  .bttn span{
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+.talle-cant-txt{
+  font-weight: 500;
+  font-size: 29px;
+}
+
+@media (max-width:1350px){
+  .prenda-info{
+    padding:15px 0;
+  }
+  .product-name{
+    font-size: 33px;
+  }
+  .txt-grey-cont{
+    width: 100%;
+    border-bottom: 2px solid #000;
+    border-right: 0;
+  }
+  
+  .talles-cont{
+    flex-direction: column;
+  height: fit-content;
+  padding-bottom: 15px;
+  }
+  
+  .talles-cont ul{
+  margin-top: 15px;
+  }
+  
+  .talles-cont ul li .button{
+    margin-right: 10px;
+  }
+  
+  
+  .button {
+    width: 39px;
+    height: 39px;
+   font-size: 15px;
+  }
+  .cantidad-agregar-cont{
+    flex-direction: column;
+    justify-content: center;
+      height: fit-content;
+  margin: 0 0 30px 0;
+  width: 100%;
+  border-top:2px solid #000 ;
+  border-bottom:2px solid #000;
+  }
+
+  
+.counter{
+  position: relative;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px 0;
+}
+.bttn{
+  position: relative;
+  bottom: 0;
+}
+}
+
+
+@media (max-width:768px) {
+  .img-product-principal{
+    margin-top: 20px;
+    order: 2;
+    height: 400px;
+  }
+
+  #product-image{
+    width: auto;
+    height:100%;
+    object-fit: contain;
+}
+  .prenda-info{
+    border: 2px solid #000;
+    padding:10px 0;
+  }
+.product-name{
+  font-size: 33px;
+}
+.precio-cuotas-cont .price{
+  font-size: 22px;
+}
+  .bttn{
+    position: relative;
+    margin: 0;
+    width: 200px;
+    height: 50px;
+    bottom: 10px;
+  }
+
+  .bttn span{
+    font-size: 14px;
+  }
+
+  .talle-cant-txt{
+ 
+    font-size: 22px;
+  }
+
+
+  .counter{
+   height: 35px;
+  }
+}
+
+@media (max-width:500px){
+  .prenda-info{
+    padding:20px 0;
+  }
+
+.talles-cont{
+  flex-direction: column;
+height: fit-content;
+padding-bottom: 15px;
+}
+.talles-cont ul{
+margin-top: 15px;
+}
+
+.talles-cont ul li .button{
+  margin-right: 10px;
+}
+
+
+.button {
+  width: 39px;
+  height: 39px;
+ font-size: 15px;
+}
+.cantidad-agregar-cont{
+  flex-direction: column;
+  justify-content: center;
+    height: fit-content;
+margin: 0 0 20px 0;
+width: 100%;
+border-top:2px solid #000 ;
+border-bottom:2px solid #000;
+background-color: #9E9E9E;
+
+}
+.bttn{
+  bottom: 0;
+}
+.txt-grey-cont{
+  width: 100%;
+  border-bottom: 2px solid #000;
+  border-right: 0;
+}
+
+.counter{
+  height: 90%;
+  min-width: 100px;
+  margin: 10px 0;
+}
+}
+/*/////////*/
+.bg-grey{
+  background: rgb(213, 213, 213);
+}
+
+.prenda-description-cont{
+  margin: auto;
+  width: 80%;
+  padding: 50px 50px;
+}
+
+.desc-prenda{
+font-size: 14px;
+margin-right: 16px;
+}
+
+/**/
+tbody{
+font-size: 14px;
+}
+
+tr{
+  border-bottom: 1px solid rgb(179, 179, 179);
+}
+
+tr:first-of-type{
+  background:  var(--primary-color);
+}
+
+tr td{
+  width: 120px;
+  height: 40px;
+  padding: 0 10px;
+}

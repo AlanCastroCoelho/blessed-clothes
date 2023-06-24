@@ -1,0 +1,37 @@
+<div class="dropdown-cont stores"  [ngClass]="{'submenu-show':menuType === 'stores'}">
+    <div class="row">
+      <div class="col-6">  
+        <h3 style="color: black;">Buenos Aires</h3>
+        <ul class="p-0">
+
+        <li *ngFor="let store of stores[0].ciudad" style="color: black;"><a [routerLink]="['/store', store.cNombre]" (click)="toggleSubMenu()">{{store.cNombre}}</a></li>
+
+      </ul
+      ></div>
+      <div class="col-6"></div>
+    </div>
+  </div>
+
+  <div class="dropdown-cont ayuda"  [ngClass]="{'submenu-show':menuType === 'ayuda'}">
+    <div class="row">
+      <div class="col-6">  
+        
+        <h3 style="color: black;">¿Necesitás Ayuda?</h3>
+        <ul class="p-0">
+          <a [routerLink]="['/ayuda/preguntas-frecuentes']" (click)="toggleSubMenu()">
+        <li style="color: black;">Preguntas Frecuentes</li></a>
+        <a [routerLink]="['ayuda/politica-de-cambios']" (click)="toggleSubMenu()">
+        <li style="color: black;">Cambios y devoluciones</li></a>
+        <a [routerLink]="['ayuda/cuidado-de-prendas']" (click)="toggleSubMenu()">
+        <li style="color: black;">Cuidado de Prendas</li></a>
+      </ul>
+    </div>
+      <div class="col-6">
+        <h3 style="color: black;">Otros</h3>
+        <ul class="p-0">
+          <a [routerLink]="['ayuda/recursos-humanos']" (click)="toggleSubMenu()">
+        <li style="color: black;">Trabaja Con Nosotros</li></a>
+      </ul>
+      </div>
+    </div>
+  </div>

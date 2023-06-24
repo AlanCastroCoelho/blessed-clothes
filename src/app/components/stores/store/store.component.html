@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col p-5">
+        <h1>Stores en {{ nombreCiudad }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col p-5 direccion-txt" *ngIf="ciudadesFiltradas.length > 0">
+        <div *ngFor="let ciudad of ciudadesFiltradas">
+            <div *ngFor="let localidad of ciudad.localidad">
+                <h3>{{ localidad.lNombre }}</h3>
+                <div *ngFor="let sucursal of localidad.sucursales">
+                    <p>📍 Dirección:<br> {{ sucursal.direccion }}</p>
+                    <p>⏰ Horario:<br> {{ sucursal.horario }}</p>
+                    <p>📱 Teléfono:<br> {{ sucursal.telefono }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col p-4 direccion-txt" *ngIf="ciudadesFiltradas.length === 0">
+        <p>No se encontraron tiendas para la ciudad especificada.</p>
+    </div>
+</div>

@@ -1,0 +1,166 @@
+<div class="row grey-backg d-flex d-md-none align-items-center justify-content-end p-3">
+  <button class="bttn-filter" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">
+    Filter 
+    <svg width="21px" height="21px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(90)" stroke="#fffff" stroke-width="0.8"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 
+      <path d="M5 12L5 4" stroke="#ffff" stroke-linecap="round"></path> 
+      <path d="M19 20L19 17" stroke="#ffff" stroke-linecap="round"></path> 
+      <path d="M5 20L5 16" stroke="#ffff" stroke-linecap="round"></path> 
+      <path d="M19 13L19 4" stroke="#ffff" stroke-linecap="round"></path> 
+      <path d="M12 7L12 4" stroke="#ffff" stroke-linecap="round"></path> 
+      <path d="M12 20L12 11" stroke="#ffff" stroke-linecap="round"></path> 
+      <circle cx="5" cy="14" r="2" stroke="#ffff" stroke-linecap="round"></circle> 
+      <circle cx="12" cy="9" r="2" stroke="#ffff" stroke-linecap="round"></circle> 
+      <circle cx="19" cy="15" r="2" stroke="#ffff" stroke-linecap="round"></circle> 
+    </g></svg>
+
+
+  </button>
+  
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasFilterLabel">Filtrar por:</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+
+ 
+
+    </div>
+    <div class="offcanvas-body">
+<div class="filter-container">
+
+     <div class="label backg-primary">
+          <h4>Tallas</h4>
+        </div>
+          <ul class="ul-tallas">
+            <li *ngFor="let talle of tallas" class="li-tallas">
+              <label class="label-tallas">
+                <input type="checkbox" [(ngModel)]="filtrosTalle[talle]" (change)="filtrarArticulos()" />
+                <div class="bttn-check">
+                <span>{{ talle }}</span>
+              </div>
+              </label>
+       
+            </li>
+          </ul>
+        
+    
+  
+        <div>
+          <div class="label backg-primary">
+          <h4>Género</h4>
+        </div>
+          <ul>
+            <li *ngFor="let genero of generos" class="mb-2">
+              <label>
+                <input type="checkbox" class="checkbox" [(ngModel)]="filtrosGenero[genero]" (change)="filtrarArticulos()" />
+                <div class="bttn-check bttn-check-sm"></div>   
+                 <span class="mx-2">{{ genero }}</span>
+                </label> 
+            </li>
+          </ul>
+        </div>
+  
+        <div>
+          <div class="label backg-primary">
+          <h4>Prenda</h4>
+        </div>
+  <ul>
+    <li *ngFor="let tipo of tiposPrenda" class="mb-2">
+    
+     <label>
+        <input type="checkbox" [(ngModel)]="filtrosTipoPrenda[tipo]" (change)="filtrarArticulos()" />
+        <div class="bttn-check bttn-check-sm"></div>   
+                 <span class="mx-2">{{ tipo }}</span>
+                </label> 
+    </li>
+  </ul>
+  
+        </div>
+    
+  
+</div>
+
+
+
+    </div>
+  </div>
+</div>
+
+<div class="row grey-backg">
+
+
+<div class="d-none d-md-flex flex-column col-2 filter-container">
+<div class="label firts-label">
+  <h4>Filtrado por:</h4>
+</div>
+
+   <div class="label backg-primary">
+        <h4>Tallas</h4>
+      </div>
+        <ul class="ul-tallas">
+          <li *ngFor="let talle of tallas" class="li-tallas">
+            <label class="label-tallas">
+              <input type="checkbox" [(ngModel)]="filtrosTalle[talle]" (change)="filtrarArticulos()" />
+              <div class="bttn-check">
+              <span>{{ talle }}</span>
+            </div>
+            </label>
+     
+          </li>
+        </ul>
+      
+  
+
+      <div>
+        <div class="label backg-primary">
+        <h4>Género</h4>
+      </div>
+        <ul>
+          <li *ngFor="let genero of generos" class="mb-2">
+            <label>
+              <input type="checkbox" class="checkbox" [(ngModel)]="filtrosGenero[genero]" (change)="filtrarArticulos()" />
+              <div class="bttn-check bttn-check-sm"></div>   
+               <span class="mx-2">{{ genero }}</span>
+              </label> 
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="label backg-primary">
+        <h4>Prenda</h4>
+      </div>
+<ul>
+  <li *ngFor="let tipo of tiposPrenda" class="mb-2">
+  
+   <label>
+      <input type="checkbox" [(ngModel)]="filtrosTipoPrenda[tipo]" (change)="filtrarArticulos()" />
+      <div class="bttn-check bttn-check-sm"></div>   
+               <span class="mx-2">{{ tipo }}</span>
+              </label> 
+  </li>
+</ul>
+
+      </div>
+  
+
+    </div>
+
+
+<div class="col-12 col-md-10 product-table ">
+    <div class="row gy-3 gx-0 d-flex pb-5">
+
+      <div class="col-4 col-md-3 m-0 pt-5 d-flex justify-content-center align-items-center" *ngFor="let prenda of articulosFiltrados">
+        <!-- Aquí coloca el contenido de cada card de artículo de ropa -->
+        <app-card [prenda]="prenda" [cantidadC]="cantidadCuotas" [cPorPrenda]="cuotasPorPrenda[prenda.id]">
+        </app-card>
+      
+      </div>
+    </div>
+  
+   <!-- <div class="load-more-element" #loadMoreElement></div>-->
+
+</div>
+   
+</div>
+

@@ -1,0 +1,175 @@
+.container-sections{
+    background-color: #9B9B9B;
+    border-top: 2px solid #000;
+}
+.cont{
+   position: relative;
+    border: 2px solid #000;
+    background-color: var(--grey-color);
+    border-radius: 20px;
+    height: 474px;
+}
+
+.backg-primary{
+    background-color: var(--primary-color);
+}
+
+a{
+    color:#000;
+}
+
+h3{
+    font-size: 40px;
+}
+p{
+    font-size: 20px;
+    line-height: 19px;
+}
+span{
+    font-size: 20px;
+}
+
+.brand-cont{
+    display: flex;
+    align-items: center;
+    padding: 26px 0px 26px 30px;
+
+}
+
+.brand-cont a{
+    font-size: 25px;
+}
+
+.title-cont{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+width: 400px;
+padding: 10px 0;
+border-right: 2px solid #000;
+}
+
+.title-cont h3{
+    font-weight: 800;
+    font-size: 45px;
+}
+
+.star-deco{
+    position: absolute;
+    left: 17px;
+    width: 45px;
+    height: 45px;
+}
+.star-two{
+
+    width: 45px;
+    height: 45px;
+}
+.mail-cont{
+padding: 15px 0;
+border-top: 2px solid #000;
+border-bottom: 2px solid #000;
+}
+
+.mail-cont p{
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+
+.grey-light-cont{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  background-color: var(--grey-color-light);
+}
+
+.grey-light-cont p{
+margin: 30px 20px;
+}
+
+.brown-backg{
+    background-color: #97836C;
+
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    height:100%;
+  }
+  
+  .svg-container {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .content-container {
+    position: absolute;
+    width: 100%;
+    top: 50%; /* Ajusta la posición vertical según tus necesidades */
+    left: 50%; /* Ajusta la posición horizontal según tus necesidades */
+    transform: translateY(-50%) translateX(-50%) ;
+  }
+
+  @media screen and (max-width: 768px){
+  .cont{
+    height: fit-content;
+  }
+
+  .title-cont{
+    width: 100%;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-right: 0;
+  }
+
+.title-cont .star-deco{
+    display: none;
+}
+
+  .grey-light-cont{
+    border: 0px solid #000;
+
+  }
+ h3{
+    font-size: clamp(33px,5vw,45px);
+    margin: 0;
+    }
+
+
+    .grey-light-cont p{
+        font-size: clamp(15px,3vw,20px);
+    }
+
+    .mail-cont p{
+        letter-spacing: 0;
+        font-size: clamp(14px,2vw,20px);
+    }
+    .container-sections{
+        padding: 50px 20px;
+    }
+
+    .star-two{
+        
+        width: clamp(10px, 8vw, 35px);
+        height: auto;
+        margin-left: 7px;
+    }
+
+    .portf-bttn{
+        padding: 40px 0;
+    }
+  }
+
+  @media screen and (max-width: 425px){
+    .star-deco{
+        display: none;
+    }
+  }

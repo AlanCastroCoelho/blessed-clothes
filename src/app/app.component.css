@@ -1,0 +1,21 @@
+app-header{
+    position: fixed;
+    top: 0;
+    z-index: 300;
+    width: 100%;
+
+}
+
+.router-container {
+    margin-top: 60px; /* Ajusta este valor según la altura de tu app-header */
+    overflow: hidden;
+    
+  }
+
+
+  @media (max-width: 768px) {
+    .router-container{
+        margin-top: 80px;
+    } 
+  }
+  

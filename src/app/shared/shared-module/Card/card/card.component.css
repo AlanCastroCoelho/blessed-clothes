@@ -1,0 +1,292 @@
+@import url('https://use.fontawesome.com/releases/v6.4.0/css/all.css');
+
+
+  .card{
+    border-radius: 0;
+    border: 0;
+    height: 540px;
+    width: 304px;
+    background: var(--grey-color);
+    transition: all .2s ease-out;
+  }
+
+  .img-container{
+    display: flex;
+    align-items: center;
+    height: 70%;
+    overflow: hidden;
+    position: relative;
+    background: radial-gradient(circle, rgba(231,231,231,1) 0%, rgb(144, 144, 144) 100%);
+  }
+
+  .card-body{
+  width: 100%;
+  padding:0;
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  }
+  
+.card-title-cont{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.name-prenda-backg{
+  display: flex;
+  align-items: center;
+width: 100%;
+}
+
+  .card-title-txt{
+   font-size: 18px;
+   font-weight: 400;
+   margin: 0;
+   padding: 8px 10px;
+  }
+  .price-cont{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  .price{
+    color: #000;
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 550;
+    margin: 0;
+  }
+
+  .cuotas-cont{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+padding: 10px 10px;
+  }
+
+.cuotas-txt{
+  font-size: 15px;
+}
+
+
+
+  .img-container img{
+    width: 100%;
+    height: auto;
+  }
+
+.talles-cont{
+  position: absolute;
+  bottom: -100px;
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  height: 155px;
+  background-color: rgba(72, 72, 72, 0.734);
+  backdrop-filter: blur(5px);
+  transition: all .3s ease;
+  padding: 10px;
+}
+
+.show-talle{
+  bottom: 0;
+  opacity: 1;
+}
+p{
+  margin: 0;
+}
+
+h6{
+  text-transform: uppercase;
+  font-size: 13px;
+ width: fit-content;
+ color: #000;
+}
+.row svg{
+  width: fit-content;
+position: relative;
+top:-6px;
+}
+
+.bttn-cont{
+  position: relative;
+    width: 100%;
+    height: 30%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+padding: 10px 0;
+transition: opacity .2s ease;
+opacity: 0;
+}
+
+.card:hover .bttn-cont{
+  opacity: 1;
+}
+
+  .bttn{
+    width: 135px;
+    height: 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease;
+background-color: #A3A3A3;
+color: #000;
+border: 2px solid #000;
+
+  }
+
+.bttn span{
+  font-weight: 300;
+}
+
+.compra-bttn{
+  background: #000;
+  color: #fff;
+}
+
+.compra-bttn:hover{
+  background: #1b1b1b;
+}
+
+  .bttn-add{
+    width: 100%;
+    background-color: #333333;
+    color: #fff;
+  }
+
+  .bttn-add:hover{
+background-color: #000;
+  }
+
+  .bttn-cont  .bttn:hover {
+    background: #000;
+    color: white;
+  }
+
+  .card:hover{
+    cursor: pointer;
+  }
+  
+  .card:hover a{
+    opacity: 1;
+  }
+  
+.bttn-talle-cont{
+  position: relative;
+  color: var(--grey-color);
+}
+
+
+.error-message {
+  
+  font-size: 14px;
+  height: 24px;
+  width: 100%;
+}
+
+/****/
+
+ul{
+  list-style: none;
+  justify-content: start;
+  align-items: start;
+}
+.label {
+  position: relative;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: transparent;
+ font-size: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.button::before {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+.button::after {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+.button:hover{
+  background-color: #303030;
+  border: 1px solid grey;
+}
+
+.label-radio-input .radio-input {
+  display: none;
+}
+
+.label-radio-input input:checked + .button {
+  background: #000;
+  box-shadow: 0 10px 20px var(--primary-color);
+  color: #fff;
+}
+
+.label-radio-input input:checked + .button::before {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.label-radio-input input:checked + .button::after {
+  animation: pulse 1.5s infinite;
+}
+
+.close-bttn{
+  position: relative;
+  right: 8px;
+  background-color: #484848;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  transition: all .3s ease;
+  width: 28px;
+  height: 28px;
+}
+
+svg:hover{
+  background-color: #000;
+}
+
+.ver-bttn{
+
+}
+
+.eye-bttn{
+  position: relative;
+margin-right: 5px;
+}
+

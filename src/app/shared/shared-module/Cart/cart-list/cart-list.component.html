@@ -1,0 +1,70 @@
+<div class="cart-list-container">
+  <div class="border-bttm mb-3">
+    <div class="header d-flex align-items-center justify-content-end">
+     <div class="close-bttn-cont">
+      <svg width="25px" height="25px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="close-icon" (click)="hideCart()">
+        <g id="icomoon-ignore">
+        </g>
+        <path d="M6.576 6.576c-5.205 5.205-5.205 13.643 0 18.849s13.643 5.205 18.849-0c5.206-5.206 5.206-13.643 0-18.849s-13.643-5.205-18.849 0zM24.67 24.67c-4.781 4.781-12.56 4.781-17.341 0s-4.781-12.56 0-17.341c4.781-4.781 12.56-4.781 17.341 0s4.78 12.56-0 17.341z" fill="#fff">
+        
+        </path>
+        <path d="M10.722 9.969l-0.754 0.754 5.278 5.278-5.253 5.253 0.754 0.754 5.253-5.253 5.253 5.253 0.754-0.754-5.253-5.253 5.278-5.278-0.754-0.754-5.278 5.278z" fill="#fff">
+        
+        </path>
+        </svg>
+      </div>
+    </div>
+  </div>
+    <div class="product-container" *ngFor="let product of products; let i = index">
+    <div class="row w-100 m-0 mb-3">
+      <div class="col-3 d-flex justify-content-center">
+         <div class="img-product-cont">
+          <img [src]="'../../../' + product.imgUrl" alt="">
+        </div>
+      </div>
+      <div class="col-9 d-flex flex-column justify-content-center">
+      <div class="row name-talla-cont">
+
+      <div class="col p-0 d-flex justify-content-between align-items-center">
+        <h5>{{product.nombre}}<span>({{product.talle}})</span></h5>
+          <div class="trash-icon-cont">
+        <svg width="28px" height="28px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="trash-icon" (click)="removeProduct(i)">
+          <path d="M5 6.77273H9.2M19 6.77273H14.8M9.2 6.77273V5.5C9.2 4.94772 9.64772 4.5 10.2 4.5H13.8C14.3523 4.5 14.8 4.94772 14.8 5.5V6.77273M9.2 6.77273H14.8M6.4 8.59091V15.8636C6.4 17.5778 6.4 18.4349 6.94673 18.9675C7.49347 19.5 8.37342 19.5 10.1333 19.5H13.8667C15.6266 19.5 16.5065 19.5 17.0533 18.9675C17.6 18.4349 17.6 17.5778 17.6 15.8636V8.59091M9.2 10.4091V15.8636M12 10.4091V15.8636M14.8 10.4091V15.8636" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      </div>
+      <div class="row cant-price-cont"> 
+      <div class="col p-0 d-flex justify-content-between align-items-center">
+        <h5>Cantidad <span>({{ product.cantidad }})</span></h5>
+        <div class="price-cont">
+        <p class="price-product">${{ getPrecioPorCantidad(product) }}</p></div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+  </div>
+  <div class="alert-info" *ngIf="products.length === 0"><p>Tu carrito de compras está vacío.</p></div>
+  <div class="row mx-0"></div>
+  <div *ngIf="products.length > 0" class="d-flex justify-content-between p-3 total-price-cont">
+    <h5 class="total-txt">Total:</h5>
+    <p class="total-price">${{ precioTotalCarrito }}</p>
+  </div>
+
+  <div class="row bttns-cont m-0 p-3">
+
+    
+    <div class="bttn">
+     <span class="w-color">Iniciar Compra</span> 
+    </div>
+
+    <div class="bttn">
+      <a href="">
+    <span>Ver más productos</span>
+  </a>  
+    </div>
+  
+  </div>
+ 
+</div>
