@@ -1,76 +1,104 @@
-
 <div class="card">
-  
-    <div class="img-container">
-      <a [routerLink]="['/prenda', prenda?.tipo, prenda?.id]">
-    <img [src]="prenda?.imgUrl?.[0]" alt="">
-  </a>
-<div class="talles-cont-card" [ngClass]="{'show-talle': showtalle}">
-  <div class="row d-flex justify-content-between">
-    <h6>Talle</h6> 
-    <svg  viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="close-bttn" (click)="showTalle()">
-    <g>
-    </g>
-    <path d="M6.576 6.576c-5.205 5.205-5.205 13.643 0 18.849s13.643 5.205 18.849-0c5.206-5.206 5.206-13.643 0-18.849s-13.643-5.205-18.849 0zM24.67 24.67c-4.781 4.781-12.56 4.781-17.341 0s-4.781-12.56 0-17.341c4.781-4.781 12.56-4.781 17.341 0s4.78 12.56-0 17.341z" fill="#fff">
-    
-    </path>
-    <path d="M10.722 9.969l-0.754 0.754 5.278 5.278-5.253 5.253 0.754 0.754 5.253-5.253 5.253 5.253 0.754-0.754-5.253-5.253 5.278-5.278-0.754-0.754-5.278 5.278z" fill="#fff">
-    
-    </path>
-    </svg>
-  </div>
-<div class="bttn-talle-cont">
-  <ul class="d-flex p-0 m-0">
-    <li *ngFor="let talle of prenda?.talles; let i = index">
-      <label class="label-radio-input" [for]="'talle-' + prenda?.id + '-' + i">
-        <input class="radio-input" [id]="'talle-' + prenda?.id + '-' + i" type="radio"
-               [name]="radioGroupName" [value]="talle" (change)="seleccionarTalle(talle)" >
-        <div class="button">
-          {{talle}}
-        </div>
-      </label>
-    </li>
-  </ul>
-  <div class="error-message"><span *ngIf="productForm.controls['talle'].invalid && productForm.controls['talle'].touched">Debes seleccionar un talle...</span></div>
-  <div class="bttn bttn-add" (click)=" agregarAlCarrito()"><span>Agregar al cariito</span></div> 
-</div>
-<!--
-  <div class="bttn" (click)=" agregarAlCarrito()"><span>Agregar al Carrito</span></div> 
---></div>
-
-  </div>
-
-    <div class="card-body">
-
-      <div class="card-title-cont">
-        <div class="name-prenda-backg">
-      <h5 class="card-title-txt">{{ prenda?.nombre}}</h5>
-    </div>
-      <div class="price-cont">
-      <h5 class="price">${{prenda?.precio }}</h5>
-    </div>
-    </div>
-<div class="cuotas-cont">
-      <p class="cuotas-txt">{{ cantidadC }} cuotas sin interés de $ {{cPorPrenda}} </p>
-    </div>  
-      <div class="bttn-cont">
-    
-        <div class="bttn compra-bttn" (click)="showTalle()"><span> Comprar</span></div> 
-  
-        <a [routerLink]="['/prenda', prenda?.tipo, prenda?.id]">
-        <div class="bttn ver-bttn">
-          <svg viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="eye-bttn">
-            <path d="M1.24575 7.77032C0.974964 7.45108 0.764936 7.18542 0.622915 7C0.764936 6.81458 0.974964 6.54892 1.24575 6.22968C1.79099 5.58685 2.57943 4.7305 3.55196 3.87552C5.51317 2.15137 8.14668 0.5 11 0.5C13.8533 0.5 16.4869 2.15137 18.4481 3.87552C19.4206 4.7305 20.209 5.58685 20.7543 6.22967C21.025 6.54892 21.2351 6.81458 21.3771 7C21.2351 7.18542 21.025 7.45108 20.7543 7.77033C20.209 8.41315 19.4206 9.2695 18.4481 10.1245C16.4869 11.8486 13.8533 13.5 11 13.5C8.14668 13.5 5.51317 11.8486 3.55196 10.1245C2.57943 9.2695 1.79099 8.41315 1.24575 7.77032ZM11 10.4184C12.8718 10.4184 14.3769 8.88114 14.3769 7C14.3769 5.11886 12.8718 3.58158 11 3.58158C9.12822 3.58158 7.62308 5.11886 7.62308 7C7.62308 8.88114 9.12822 10.4184 11 10.4184Z" fill="#A3A3A3" stroke="black"/>
-            </svg>
-
-            <span>Ver</span>
-          
-          </div>
+  <div class="img-container">
+    <a [routerLink]="['/prenda', prenda?.tipo, prenda?.id]">
+      <img [src]="prenda?.imgUrl?.[0]" alt="" />
     </a>
-
+    <div class="talles-cont-card" [ngClass]="{ 'show-talle': showtalle }">
+      <div class="row d-flex justify-content-between">
+        <h6>Talle</h6>
+        <svg
+          viewBox="0 0 30 30"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          class="close-bttn"
+          (click)="showTalle()"
+        >
+          <g></g>
+          <path
+            d="M6.576 6.576c-5.205 5.205-5.205 13.643 0 18.849s13.643 5.205 18.849-0c5.206-5.206 5.206-13.643 0-18.849s-13.643-5.205-18.849 0zM24.67 24.67c-4.781 4.781-12.56 4.781-17.341 0s-4.781-12.56 0-17.341c4.781-4.781 12.56-4.781 17.341 0s4.78 12.56-0 17.341z"
+            fill="#fff"
+          ></path>
+          <path
+            d="M10.722 9.969l-0.754 0.754 5.278 5.278-5.253 5.253 0.754 0.754 5.253-5.253 5.253 5.253 0.754-0.754-5.253-5.253 5.278-5.278-0.754-0.754-5.278 5.278z"
+            fill="#fff"
+          ></path>
+        </svg>
+      </div>
+      <div class="bttn-talle-cont">
+        <ul class="d-flex p-0 m-0">
+          <li *ngFor="let talle of prenda?.talles; let i = index">
+            <label
+              class="label-radio-input"
+              [for]="'talle-' + prenda?.id + '-' + i"
+            >
+              <input
+                class="radio-input"
+                [id]="'talle-' + prenda?.id + '-' + i"
+                type="radio"
+                [name]="radioGroupName"
+                [value]="talle"
+                (change)="seleccionarTalle(talle)"
+              />
+              <div class="button">
+                {{ talle }}
+              </div>
+            </label>
+          </li>
+        </ul>
+        <div class="error-message">
+          <span
+            *ngIf="
+              productForm.controls['talle'].invalid &&
+              productForm.controls['talle'].touched
+            "
+            >Debes seleccionar un talle...</span
+          >
+        </div>
+        <div class="bttn bttn-add" (click)="agregarAlCarrito()">
+          <span>Agregar al cariito</span>
+        </div>
+      </div>
     </div>
+  </div>
 
+  <div class="card-body">
+    <div class="card-title-cont">
+      <div class="name-prenda-backg">
+        <h5 class="card-title-txt">{{ prenda?.nombre }}</h5>
+      </div>
+      <div class="price-cont">
+        <h5 class="price">${{ prenda?.precio }}</h5>
+      </div>
     </div>
- 
+    <div class="cuotas-cont">
+      <p class="cuotas-txt">
+        {{ cantidadC }} cuotas sin interés de $ {{ cPorPrenda }}
+      </p>
+    </div>
+    <div class="bttn-cont">
+      <div class="bttn compra-bttn" (click)="showTalle()">
+        <span> Comprar</span>
+      </div>
 
-  </div>   
+      <a [routerLink]="['/prenda', prenda?.tipo, prenda?.id]">
+        <div class="bttn ver-bttn">
+          <svg
+            viewBox="0 0 22 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="eye-bttn"
+          >
+            <path
+              d="M1.24575 7.77032C0.974964 7.45108 0.764936 7.18542 0.622915 7C0.764936 6.81458 0.974964 6.54892 1.24575 6.22968C1.79099 5.58685 2.57943 4.7305 3.55196 3.87552C5.51317 2.15137 8.14668 0.5 11 0.5C13.8533 0.5 16.4869 2.15137 18.4481 3.87552C19.4206 4.7305 20.209 5.58685 20.7543 6.22967C21.025 6.54892 21.2351 6.81458 21.3771 7C21.2351 7.18542 21.025 7.45108 20.7543 7.77033C20.209 8.41315 19.4206 9.2695 18.4481 10.1245C16.4869 11.8486 13.8533 13.5 11 13.5C8.14668 13.5 5.51317 11.8486 3.55196 10.1245C2.57943 9.2695 1.79099 8.41315 1.24575 7.77032ZM11 10.4184C12.8718 10.4184 14.3769 8.88114 14.3769 7C14.3769 5.11886 12.8718 3.58158 11 3.58158C9.12822 3.58158 7.62308 5.11886 7.62308 7C7.62308 8.88114 9.12822 10.4184 11 10.4184Z"
+              fill="#A3A3A3"
+              stroke="black"
+            />
+          </svg>
+
+          <span>Ver</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,15 @@
 * {
-    color: #000;
-  }
-  
-  .direccion-txt{
+  color: #000;
+}
+
+.direccion-txt {
   border: 1px solid grey;
-  }
+}
 
-  .bg-grey-L{
-    background: var(--grey-color-light);
-  }
+.bg-grey-L {
+  background: var(--grey-color-light);
+}
 
-  .bg-grey{
-    background: var(--grey-color);
-  }
+.bg-grey {
+  background: var(--grey-color);
+}

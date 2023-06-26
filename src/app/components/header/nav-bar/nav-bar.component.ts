@@ -23,8 +23,7 @@ stores: Store[] = [];
     private storeS: StoreService) { }
 
   ngOnInit() {
-    this.updateTotalItems(); // Actualizar el valor inicial
-    // Suscribirse a los cambios en la cantidad total de elementos
+    this.updateTotalItems();
     this.cartS.totalItemsChanged.subscribe(() => {
       this.updateTotalItems();
     });

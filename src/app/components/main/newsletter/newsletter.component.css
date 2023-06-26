@@ -1,223 +1,215 @@
-.newsletter-cont{
-    background-color: var(--grey-color);
-    padding: 0 0 80px 0;
-    color: #000;
+.newsletter-cont {
+  background-color: var(--grey-color);
+  padding: 0 0 80px 0;
+  color: #000;
 }
 
-.row{
-   padding: 0;
-   margin: 0;
-    
+.row {
+  padding: 0;
+  margin: 0;
 }
 
-img{
-    width: 350px;
-    height: auto;
+img {
+  width: 350px;
+  height: auto;
 }
-.newslttr-cont{
-    margin: 0;
-    height: 202px;
-    background-color: var(--grey-color);
-}
-
-.title-cont{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 100%;
-border-right: 2px solid #000;
+.newslttr-cont {
+  margin: 0;
+  height: 202px;
+  background-color: var(--grey-color);
 }
 
-.star{
-position: absolute;
-width: 44px;
+.title-cont {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  border-right: 2px solid #000;
 }
 
-.star-left{
-left: 13px;
-top: 10px;
+.star {
+  position: absolute;
+  width: 44px;
 }
 
-.star-right{
-    right: 13px;
-    bottom: 10px;
+.star-left {
+  left: 13px;
+  top: 10px;
 }
 
-.star-top{
-    margin: 10px;
-    width: 33px;
+.star-right {
+  right: 13px;
+  bottom: 10px;
 }
 
-.info-cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
+.star-top {
+  margin: 10px;
+  width: 33px;
 }
 
-.mail-cont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--grey-color-light);
-    width: 100%;
-    height: 100%;
+.info-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
 }
 
-.mail-cont input{
-    height: 46px;
-    width: 60%;
-    color: #000;
-    padding-left: 20px;
-    background-color: var(--primary-color);
-    border-radius: 30px;
-    border: 2px solid #000;
-    outline: none;
+.mail-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-color-light);
+  width: 100%;
+  height: 100%;
 }
 
-.mail-cont input::placeholder{
-    color: #000;
+.mail-cont input {
+  height: 46px;
+  width: 60%;
+  color: #000;
+  padding-left: 20px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  border: 2px solid #000;
+  outline: none;
 }
 
-.news-top-txt{
-    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   text-align: center;
-    width: 100%;
-    border-bottom: 2px solid #000;
-    padding: 12px 0;
+.mail-cont input::placeholder {
+  color: #000;
 }
 
-.news-top-txt p{
-    font-size: clamp(16px,2vw,20px);
-    font-weight: medium;
-    margin: 0;
+.news-top-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  padding: 12px 0;
 }
 
-.title-cont span{
-    text-transform: uppercase;
-    font-size: 80px;
-    font-weight: bold;
-    line-height: 70px;
-    white-space: nowrap;
+.news-top-txt p {
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: medium;
+  margin: 0;
 }
 
-
-.subtitle-bar{
-    background-color: var(--secondary-color);
-    white-space: nowrap;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
+.title-cont span {
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 70px;
+  white-space: nowrap;
 }
 
-.subtitle-bar p{
-    font-size: 25px;
-    font-weight: bold;
-    margin: 0;
+.subtitle-bar {
+  background-color: var(--secondary-color);
+  white-space: nowrap;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
 }
 
-.col-2{
-    border-left: 2px solid #000;
+.subtitle-bar p {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
 }
 
-.smile-icon-cont{
-    width: 146px;
-    height: 146px;
-    background-color: var(--primary-color);
-    border-radius: 50%;
-    border: 4px solid #000;
+.col-2 {
+  border-left: 2px solid #000;
 }
 
-.smile-icon{
-    width: 78px;
+.smile-icon-cont {
+  width: 146px;
+  height: 146px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  border: 4px solid #000;
 }
-@media screen and (max-width: 1200px){
-.title-cont{
+
+.smile-icon {
+  width: 78px;
+}
+@media screen and (max-width: 1200px) {
+  .title-cont {
     width: 100%;
     white-space: nowrap;
     border-right: 0;
     border-bottom: 2px solid #000;
     background-color: var(--grey-color-light);
-}
+  }
 
-.title-cont span{
+  .title-cont span {
     white-space: nowrap;
     font-size: 50px;
     line-height: 50px;
-}
-.star{
+  }
+  .star {
     position: absolute;
     width: 30px;
-    }
-    
-    .star-left{
+  }
+
+  .star-left {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    }
-    
-    .star-right{
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-.news-top-txt{
+  }
+
+  .star-right {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .news-top-txt {
     display: flex;
-   justify-content: space-between;
-   align-items: center;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     border-bottom: 0;
     padding: 8px 0;
     background-color: var(--grey-color);
-}
+  }
 
-.star-top{
+  .star-top {
     margin: 10px;
     width: 25px;
-}
-.mail-cont{
+  }
+  .mail-cont {
     background-color: var(--grey-color);
+  }
+}
+@media screen and (max-width: 768px) {
+  .title-cont span {
+    font-size: 46px;
+    line-height: 46px;
+  }
+  .subtitle-bar p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
-}
-@media screen and (max-width: 768px){
-
-    .title-cont span{
-        font-size: 46px;
-        line-height: 46px;
-    }
-    .subtitle-bar p{
-        font-size: 16px;
-        font-weight: bold;
-        margin: 0;
-    }
-    
-
-
-    
+@media screen and (max-width: 630px) {
+  .subtitle-bar p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
-@media screen and (max-width: 630px){
-    .subtitle-bar p{
-        font-size: 16px;
-        font-weight: bold;
-        margin: 0;
-    } 
-}
-
-@media screen and (max-width: 425px){
-    .star{
-        display: none;
-    }
-    .title-cont span{
-        font-size: 34px;
-        line-height: 34px;
-    }
-    .mail-cont input{
-        height: 35px;
-        width: 85%;
-    }
+@media screen and (max-width: 425px) {
+  .star {
+    display: none;
+  }
+  .title-cont span {
+    font-size: 34px;
+    line-height: 34px;
+  }
+  .mail-cont input {
+    height: 35px;
+    width: 85%;
+  }
 }

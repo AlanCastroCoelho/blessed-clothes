@@ -8,14 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShopModule } from './components/shop/shop.module';
 import { SingleProductModule } from './components/single-product/single-product.module';
 import { FooterModule } from './components/footer/footer.module';
-import { TransitionComponent } from './components/transition/transition.component';
 import { StoresModule } from './components/stores/stores.module';
 import { AyudaModule } from './components/ayuda/ayuda.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TransitionComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,

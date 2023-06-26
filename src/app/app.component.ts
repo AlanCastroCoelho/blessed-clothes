@@ -8,18 +8,10 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class AppComponent  implements OnInit{
   title = 'blessed-clothes';
-  showTransition: boolean = false;
 
   constructor(private router: Router) {}
 
 ngOnInit() {
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        this.showTransition = true;
-        setTimeout(() => {
-          this.showTransition = false;
-        }, 500); // Duración de la transición en milisegundos (0.5 segundos)
-      }
-    });
+   
   }
 }

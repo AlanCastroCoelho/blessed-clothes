@@ -1,15 +1,16 @@
-<ngx-slick-carousel class="carousel"  #slickModal="slick-carousel"
- [config]="carouselOptions"
- (init)="slickInit($event)">
-
+<ngx-slick-carousel
+  class="carousel"
+  #slickModal="slick-carousel"
+  [config]="carouselOptions"
+  (init)="slickInit($event)"
+>
   <div ngxSlickItem *ngFor="let prenda of prendasDestacadas" class="slide">
- 
-    <app-card 
-    [prenda]="prenda"
-    [cantidadC]="cantidadCuotas"
-    [cPorPrenda]="cuotasPorPrenda[prenda.id]"
-    [radioGroupName]="'talle-group-' + prenda.id">
-  </app-card>
-        </div>
-
-  </ngx-slick-carousel>
+    <app-card
+      [prenda]="prenda"
+      [cantidadC]="cantidadCuotas"
+      [cPorPrenda]="cuotasPorPrenda[prenda.id]"
+      [radioGroupName]="'talle-group-' + prenda.id"
+    >
+    </app-card>
+  </div>
+</ngx-slick-carousel>

@@ -1,162 +1,163 @@
+.header {
+  position: relative;
+  top: 0;
+}
 
-.header{
-position: relative;
-top: 0;
-  }
-  
-  .section-title{
-    background-color: var(--grey-color);
-    position: relative;
-    width: 100%;
-    height: 460px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.section-title {
+  background-color: var(--grey-color);
+  position: relative;
+  width: 100%;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  h2{
-    font-weight: 500;
-    position: relative;
-    top: -92px;
-    font-size: 15vw;
-    pointer-events: none;
-    display: inline;
-    user-select: none;
-  }
+h2 {
+  font-weight: 500;
+  position: relative;
+  top: -92px;
+  font-size: 15vw;
+  pointer-events: none;
+  display: inline;
+  user-select: none;
+}
 
-  .subtitle-cont{
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    height: 47px;
-    width: 100%;
-    transform: translateY(-50%);
+.subtitle-cont {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  height: 47px;
+  width: 100%;
+  transform: translateY(-50%);
   white-space: nowrap;
-  background-color: #ABABAB;
+  background-color: #ababab;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
-  }
-  
-  .subtitle-cont p{
-    position: absolute;
-    font-size: 20px;
-    line-height: 35px;
-    font-weight: 500;
-    color: #000;
-    margin: 0;
-    user-select: none;
-  }
+}
 
-  .world-logo-cont{
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-padding: 10px;
-border: 4px solid #000;
-border-radius: 50%;
-background-color: var(--primary-color);
-  }
+.subtitle-cont p {
+  position: absolute;
+  font-size: 20px;
+  line-height: 35px;
+  font-weight: 500;
+  color: #000;
+  margin: 0;
+  user-select: none;
+}
 
-.logo-circular{
+.world-logo-cont {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  border: 4px solid #000;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+
+.logo-circular {
   width: 63px;
   height: 63px;
 }
-.to-right{
+.to-right {
   animation: toRight 50s linear infinite;
-  }
-  
-  .to-left{
-    animation: toLeft 50s linear infinite;
-  }
-@keyframes toLeft {
-  0%{left: 0;}
-  100%{left: -100%;}
 }
 
+.to-left {
+  animation: toLeft 50s linear infinite;
+}
+@keyframes toLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
 
 @keyframes toRight {
-  0%{right: 0;}
-  100%{right: -100%;}
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
 }
 
-@media screen and (max-width: 768px){
- h2{
+@media screen and (max-width: 768px) {
+  h2 {
     top: -47px;
     font-size: 16vw;
   }
 
-  .section-title{
+  .section-title {
     height: 300px;
   }
 
-  .subtitle-cont{
+  .subtitle-cont {
     height: 40px;
   }
-  
-  .subtitle-cont p{
+
+  .subtitle-cont p {
     font-size: 16px;
     line-height: 35px;
   }
 
-  .world-logo-cont{
+  .world-logo-cont {
     bottom: 20px;
-padding: 10px;
+    padding: 10px;
   }
 
-.logo-circular{
-  width: 43px;
-  height: 43px;
-}
+  .logo-circular {
+    width: 43px;
+    height: 43px;
+  }
 }
 
-@media screen and (max-width: 630px){
-/*  h2{
-    top: -25px;
-    font-size: 80px;
-  }*/
-
-  h2::before{
+@media screen and (max-width: 630px) {
+  h2::before {
     top: 40px;
-    }
+  }
 
-  .subtitle-cont{
+  .subtitle-cont {
     height: 40px;
   }
-  
-  .subtitle-cont p{
+
+  .subtitle-cont p {
     font-size: 16px;
     line-height: 16px;
   }
 
-  .world-logo-cont{
+  .world-logo-cont {
     bottom: 60px;
-padding: 8px;
+    padding: 8px;
   }
 
-.logo-circular{
-  width: 38px;
-  height: 38px;
-}
+  .logo-circular {
+    width: 38px;
+    height: 38px;
+  }
 }
 
-@media screen and (max-width: 425px){
-  .section-title{
+@media screen and (max-width: 425px) {
+  .section-title {
     height: 260px;
   }
-  .subtitle-cont p{
+  .subtitle-cont p {
     font-size: 15px;
     line-height: 15px;
   }
 
-  .world-logo-cont{
-    bottom:40px;
-padding: 6px;
+  .world-logo-cont {
+    bottom: 40px;
+    padding: 6px;
   }
 
-.logo-circular{
-  width: 35px;
-  height: 35px;
-}
+  .logo-circular {
+    width: 35px;
+    height: 35px;
+  }
 }
