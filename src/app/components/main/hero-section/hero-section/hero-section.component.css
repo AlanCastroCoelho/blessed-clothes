@@ -111,6 +111,32 @@ app-informative-banner {
   height: auto;
 }
 
+
+.to-right {
+  animation: toRight 50s linear infinite;
+}
+
+.to-left {
+  animation: toLeft 50s linear infinite;
+}
+@keyframes toLeft {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes toRight {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .video-cont {
     height: 84vh;
