@@ -21,6 +21,8 @@
         .bttn-add{
           width: 100%;
         }
+
+
     
       }
       
@@ -75,11 +77,22 @@
           .bttn-add{
             width: 100%;
           }
-    
-          .close-bttn{
-            width: 21px;
-            height: 21px;
+
+          .talles-cont-card{
+           height: fit-content;
           }
+
+          .close-bttn{
+            padding: 1px 0;
+            width: 39px;
+            height: 25px;
+          }
+
+          .error-message{
+            font-size: 11px;
+          }
+
+
       }
     
       @media screen and (max-width: 1132px){
@@ -129,9 +142,9 @@
             .bttn-add{
               width: 100%;
             }
-    .talles-cont{
+    .talles-cont-card{
       width: 100%;
-      height: 130px;
+      height: fit-content;
       padding: 10px;
     }
             .button {
@@ -141,6 +154,10 @@
               box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
               cursor: pointer;
               margin-right: 8px;
+            }
+            .eye-bttn{
+              width: 16px;
+    height: 8px;
             }
       }
       @media screen and (max-width: 890px){
@@ -190,7 +207,7 @@
               .bttn-add{
                 width: 100%;
               }
-      .talles-cont{
+      .talles-cont-card{
         width: 100%;
         height: 130px;
         padding: 10px;
@@ -202,6 +219,11 @@
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
                 cursor: pointer;
                 margin-right: 8px;
+              }
+
+              .eye-bttn{
+                width: 19px;
+      height: 9px;
               }
       }
             

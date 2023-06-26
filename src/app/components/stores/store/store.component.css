@@ -5,3 +5,11 @@
   .direccion-txt{
   border: 1px solid grey;
   }
+
+  .bg-grey-L{
+    background: var(--grey-color-light);
+  }
+
+  .bg-grey{
+    background: var(--grey-color);
+  }

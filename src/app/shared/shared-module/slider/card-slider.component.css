@@ -77,12 +77,18 @@
       }
 
       .close-bttn{
-        width: 21px;
-        height: 21px;
+        padding: 1px;
+        width: 38px;
+        height: 24px;
       }
   }
 
   @media screen and (max-width: 1024px){
+    .close-bttn{
+      width: 32px;
+      height: 20px;
+    }
+
     .card{
       border-radius: 0;
       height: fit-content;
@@ -129,7 +135,7 @@
         .bttn-add{
           width: 100%;
         }
-.talles-cont{
+.talles-cont-card{
   width: 100%;
   height: 130px;
   padding: 10px;
@@ -151,6 +157,11 @@
       width: 218px;
       background: var(--grey-color);
       transition: all .2s ease-out;
+    }
+
+    .close-bttn{
+      width: 39px;
+      height: 22px;
     }
 
     .img-container{

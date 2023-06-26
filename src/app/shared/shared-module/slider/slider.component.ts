@@ -37,7 +37,7 @@ export class SliderComponent implements OnInit{
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    autoplay:true,
+    autoplay:false,
     autoplaySpeed: 2450,
     responsive: [
       {

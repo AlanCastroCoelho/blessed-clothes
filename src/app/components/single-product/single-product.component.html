@@ -19,11 +19,11 @@
     </div>
 
     <form [formGroup]="productForm" class="product-form">
-      <div class="talles-cont">
+      <div class="talles-cont" >
 <div class="txt-grey-cont">
-        <label for="talle" class="talle-cant-txt">Talle:</label>
+        <span class="talle-cant-txt">Talle:</span>
       </div>
-        <ul class="d-flex align-center p-0">
+        <ul class="p-0">
           <li *ngFor="let talle of prenda?.talles">
             <label class="label-radio-input" [for]="'talle-' + talle">
               <input class="radio-input" [id]="'talle-' + talle" type="radio" name="talle" formControlName="talle" [value]="talle">

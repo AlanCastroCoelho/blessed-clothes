@@ -36,7 +36,7 @@
     height:295px;
 width: 295px;
 overflow: hidden;
-background: #3C3C3C;
+background: #000;
 border: 2px solid #000;
 }
 
@@ -54,7 +54,7 @@ border: 2px solid #000;
     height: 100%;
     object-fit: cover;
     transition: all .3s ease;
-    opacity: 0;
+    opacity: .4;
 }
 
 .red-img-cont .red-icon{
@@ -143,13 +143,23 @@ transition: all .3s ease;
 }
 
 @media screen and (max-width: 768px){
+    .container-sections{
+     padding: 0px 20px; 
+    }
+    .invisible-hvr{
+        padding: 0;
+    }
 .red-img-cont{
-    height:auto;
-    width: 95%;
+    height:100%;
+    width: 96%;
     min-height: 90px;
     min-width: 90px;
+    background: #000;
 }
+
+
 .fllwrs-count{
+    display: none;
     width: 95%;
 }
 
@@ -157,8 +167,16 @@ transition: all .3s ease;
 .fllwrs-count p{
     font-size: 18px;
 }
+
+
+.invisible-hvr:hover {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+
 .red-img-cont .red-icon{
-width: 40%;
+width: 30%;
 height: auto;
 }
 

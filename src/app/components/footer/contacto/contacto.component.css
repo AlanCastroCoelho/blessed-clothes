@@ -1,13 +1,20 @@
 .container-sections{
+    position: relative;
     background-color: #9B9B9B;
     border-top: 2px solid #000;
+    padding: 0;
+}
+.row{
+    padding: 35px;
 }
 .cont{
    position: relative;
     border: 2px solid #000;
     background-color: var(--grey-color);
     border-radius: 20px;
-    height: 474px;
+    height: 430px;
+    width: 100%;
+    padding: 45px 0;
 }
 
 .backg-primary{
@@ -17,9 +24,14 @@
 a{
     color:#000;
 }
+.title-cont{
 
+    border-bottom:2px solid #000;
+}
 h3{
-    font-size: 40px;
+
+    font-size: 10vw;
+    margin: 0;
 }
 p{
     font-size: 20px;
@@ -32,27 +44,41 @@ span{
 .brand-cont{
     display: flex;
     align-items: center;
-    padding: 26px 0px 26px 30px;
-
+    padding: 30px 26px;
+width: 100%;
+border-top:2px solid #000;
+border-bottom:2px solid #000;
+transition: all .2s ease;
 }
 
 .brand-cont a{
     font-size: 25px;
 }
 
+.brand-cont:hover{
+    background: #000;
+    color: #fff;
+    }
+    .brand-cont:hover a{
+    color: #fff;
+    }
+
+
+
+
 .title-cont{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-width: 400px;
+width: 100%;
 padding: 10px 0;
-border-right: 2px solid #000;
 }
 
-.title-cont h3{
-    font-weight: 800;
-    font-size: 45px;
+.middle-cont{
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 .star-deco{
@@ -62,14 +88,36 @@ border-right: 2px solid #000;
     height: 45px;
 }
 .star-two{
-
+    position: relative;
     width: 45px;
     height: 45px;
+    fill: #000;
+    stroke: #000;
+    transition: all .3s ease;
+    
 }
+
+
+.world-logo-cont{
+    margin: 10px;
+    width: fit-content;
+    background-color: var(--primary-color);
+border: 3px solid #000;
+padding: 8px;
+}
+
+.logo-circular{
+width: 57px;
+height: auto;
+}
+
 .mail-cont{
 padding: 15px 0;
 border-top: 2px solid #000;
 border-bottom: 2px solid #000;
+width: 100%;
+transition: all .3s ease;
+user-select: none;
 }
 
 .mail-cont p{
@@ -77,7 +125,13 @@ border-bottom: 2px solid #000;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: 600;
+
 }
+
+.mail-cont:hover{
+    background: #000;
+    color: #fff;
+    }
 
 .grey-light-cont{
     display: flex;
@@ -86,6 +140,7 @@ border-bottom: 2px solid #000;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
   background-color: var(--grey-color-light);
+  user-select: none;
 }
 
 .grey-light-cont p{
@@ -97,63 +152,70 @@ margin: 30px 20px;
 
 }
 
+h4{
+font-size: 2.5vw;
+margin: 0;
+}
 
-.container {
-    position: relative;
+.portf-bttn{
+transition: all .3s ease;
+}
+
+.portf-bttn:hover{
+background: #000;
+color: #fff;
+}
+
+.portf-bttn:hover .star-two{
+    fill: #fff;
+    stroke: #fff;
+}
+
+  @media screen and (max-width:1300px){
+    .brand-cont{
+        display: flex;
+        align-items: center;
+        padding: 26px 11px;
     width: 100%;
-    height:100%;
-  }
-  
-  .svg-container {
-    width: 100%;
-    height: 100%;
-  }
+    }
+    
+    .brand-cont a{
+        font-size: clamp(19px,2vw,28px);
+    }
 
 
-  .content-container {
-    position: absolute;
-    width: 100%;
-    top: 50%; /* Ajusta la posición vertical según tus necesidades */
-    left: 50%; /* Ajusta la posición horizontal según tus necesidades */
-    transform: translateY(-50%) translateX(-50%) ;
+.mail-cont p{
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
   }
 
   @media screen and (max-width: 768px){
   .cont{
     height: fit-content;
   }
-
-  .title-cont{
-    width: 100%;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    border-right: 0;
-  }
-
-.title-cont .star-deco{
-    display: none;
+h3{
+    font-size: 15vw;
 }
 
   .grey-light-cont{
     border: 0px solid #000;
 
   }
- h3{
-    font-size: clamp(33px,5vw,45px);
-    margin: 0;
-    }
+ 
 
 
     .grey-light-cont p{
-        font-size: clamp(15px,3vw,20px);
+        font-size: clamp(15px,3vw,18px);
     }
 
     .mail-cont p{
         letter-spacing: 0;
-        font-size: clamp(14px,2vw,20px);
+        font-size: clamp(14px,3.5vw,20px);
     }
     .container-sections{
-        padding: 50px 20px;
+        padding:0px;
     }
 
     .star-two{
@@ -164,8 +226,26 @@ margin: 30px 20px;
     }
 
     .portf-bttn{
+        margin-top: 20px;
         padding: 40px 0;
     }
+h4{
+    font-size: clamp(23px,4.7vw,35px);
+    
+}
+    .world-logo-cont{
+        margin: 10px;
+        width: fit-content;
+        background-color: var(--primary-color);
+    border: 3px solid #000;
+    padding: 7px;
+    }
+    
+    .logo-circular{
+    width: 47px;
+    height: auto;
+    }
+    
   }
 
   @media screen and (max-width: 425px){

@@ -1,7 +1,5 @@
 @import url('https://use.fontawesome.com/releases/v5.15.3/css/all.css');
 
-
-
 :root{
   position: relative;
 }
@@ -26,14 +24,17 @@ height: 100%;
   background-color: var(--primary-color);
 }
 .navbar-brand{
+    font-size: 25px;
+    font-weight: bold;
+  line-height: 24px;
   margin: 0;
 }
+
 .backdrop-active{
   left: 0vw;
   opacity: 1;
 }
 nav{
-
   z-index: 50;
 }
 
@@ -89,17 +90,19 @@ justify-content: center;
   padding: 0 18px;
   height: 59.06px;
   text-transform: uppercase;
+  transition:all .3s ease;
 }
 
 .navbar-nav {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 0;
 }
 
 .nav-item:hover{
-  background-color: var(--primary-color);
+  background-color:var(--primary-color);
 }
+
 
 .nav-link{
 padding: 0!important;
@@ -125,6 +128,7 @@ app-cart-list {
 }
 
 .cart-icon{
+  width: fit-content;
 }
 
 
@@ -171,7 +175,7 @@ app-submenu{
 @media (max-width: 768px) {
   #offcanvasExample{
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
   .offcanvas{
 
@@ -179,7 +183,7 @@ app-submenu{
   }
   .offcanvas-header{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     position: absolute;
     top:150px;
     left: 0;

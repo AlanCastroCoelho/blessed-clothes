@@ -57,17 +57,18 @@ export class SingleProductComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.route.params.subscribe(params => {
       const tipoPrenda = params['tipo'];
       this.prendaId = parseInt(params['id'], 10);
       this.cargarPrenda();
+  
     });
   }
 
   async cargarPrenda(): Promise<void> {
     if (this.prendaId !== undefined) {
-      this.prenda = await this.prendasS.obtenerPrendaPorId(this.prendaId);
+      this.prenda = this.prendasS.obtenerPrendaPorId(this.prendaId);
       const firstImageUrl = this.prenda?.imgUrl[0];
       console.log(firstImageUrl);
   
@@ -81,6 +82,7 @@ export class SingleProductComponent implements OnInit {
       await this.asignarPrecio();
       this.preciosPorProducto = this.cartService.getPreciosPorProducto();
     }
+    console.log(this.prenda?.talles);
   }
 
   async asignarPrecio(): Promise<void> {

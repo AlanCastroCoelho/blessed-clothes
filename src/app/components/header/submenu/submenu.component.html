@@ -4,7 +4,7 @@
         <h3 style="color: black;">Buenos Aires</h3>
         <ul class="p-0">
 
-        <li *ngFor="let store of stores[0].ciudad" style="color: black;"><a [routerLink]="['/store', store.cNombre]" (click)="toggleSubMenu()">{{store.cNombre}}</a></li>
+        <li *ngFor="let store of stores[0].ciudad"><a [routerLink]="['/store', store.cNombre]" (click)="toggleSubMenu()">{{store.cNombre}}</a></li>
 
       </ul
       ></div>
@@ -16,21 +16,21 @@
     <div class="row">
       <div class="col-6">  
         
-        <h3 style="color: black;">¿Necesitás Ayuda?</h3>
+        <h3 >¿Necesitás Ayuda?</h3>
         <ul class="p-0">
           <a [routerLink]="['/ayuda/preguntas-frecuentes']" (click)="toggleSubMenu()">
-        <li style="color: black;">Preguntas Frecuentes</li></a>
+        <li >Preguntas Frecuentes</li></a>
         <a [routerLink]="['ayuda/politica-de-cambios']" (click)="toggleSubMenu()">
-        <li style="color: black;">Cambios y devoluciones</li></a>
+        <li >Cambios y devoluciones</li></a>
         <a [routerLink]="['ayuda/cuidado-de-prendas']" (click)="toggleSubMenu()">
-        <li style="color: black;">Cuidado de Prendas</li></a>
+        <li >Cuidado de Prendas</li></a>
       </ul>
     </div>
       <div class="col-6">
-        <h3 style="color: black;">Otros</h3>
+        <h3 >Otros</h3>
         <ul class="p-0">
           <a [routerLink]="['ayuda/recursos-humanos']" (click)="toggleSubMenu()">
-        <li style="color: black;">Trabaja Con Nosotros</li></a>
+        <li >Trabaja Con Nosotros</li></a>
       </ul>
       </div>
     </div>

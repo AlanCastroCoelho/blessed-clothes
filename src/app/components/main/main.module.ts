@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DestacadosComponent } from './destacados/destacados.component';
+import { NovedadesComponent } from './novedades/novedades';
 import { RedesComponent } from './redes/redes.component';
 import { SharedModule } from '../../shared/shared-module/shared.module';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
@@ -16,7 +16,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
   declarations: [ 
     HeroSectionComponent,
     InformativeBannerComponent,
-    DestacadosComponent,
+    NovedadesComponent,
     PrendasComponent,
     RedesComponent,
     MainComponent,

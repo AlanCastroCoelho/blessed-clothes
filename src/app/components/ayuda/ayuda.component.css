@@ -1,3 +1,36 @@
 *{
     color: #000;
 }
+
+.bg-grey-L{
+    background: var(--grey-color-light);
+  }
+
+  .bg-grey{
+    background: var(--grey-color);
+  }
+
+  .ayuda-body{
+    padding: 70px 30px;
+  }
+
+  .title-ayuda{
+padding: 25px 15px;
+  }
+
+h1, h2{
+    font-weight: bold;
+font-size: 26px;
+}
+h3{
+    font-size: 18px;  
+    font-weight: bold;
+}
+
+p , li{
+    font-size: 14px;
+}
+  img{
+    margin: 20px 0;
+    border-radius: 10px;
+ }

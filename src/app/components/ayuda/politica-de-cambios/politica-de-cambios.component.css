@@ -1,0 +1,10 @@
+.bttn{
+padding: 10px 25px;
+border-radius: 30px;
+background-color: var(--primary-color);
+}
+
+.bttn:hover{
+    color: #fff;
+    background-color: #000;
+}

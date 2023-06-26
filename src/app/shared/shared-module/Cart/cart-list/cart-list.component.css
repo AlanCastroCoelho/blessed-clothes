@@ -118,11 +118,12 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #3f787c;
+    border: 1px solid #5e5e5e;
     padding: 10px 0;
 }
 
 .alert-info p{
+    color: #5e5e5e;
     padding: 0;
     margin: 0;
 }
