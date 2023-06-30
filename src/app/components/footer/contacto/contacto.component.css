@@ -47,10 +47,12 @@ span {
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
   transition: all 0.2s ease;
+
 }
 
 .brand-cont a {
   font-size: 25px;
+  font-weight: 700;
 }
 
 .brand-cont:hover {
