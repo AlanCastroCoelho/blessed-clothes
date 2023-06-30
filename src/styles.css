@@ -19,9 +19,6 @@ a{
   padding: 120px 40px;
 }
 
-.borderSW{
-border: 2px solid #fff;
-}
 
 .f-medium{
   font-weight: 600;
@@ -29,24 +26,6 @@ border: 2px solid #fff;
 
 .f-bold{
 font-weight: bold;
-}
-
-.register {
-  border: 12px solid #fff;
-  position: absolute;
-  bottom: 0px;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.register span {
-  color: #fff;
-  font-size: 85px;
-  font-weight: bold;
 }
 
 .conts {
@@ -58,58 +37,16 @@ font-weight: bold;
   overflow: hidden;
 }
 
-.circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 15;
-}
+
 .backg-primary{
   background-color: var(--primary-color);
 }
 
-.green-bckg {
-  background: var(--primary-color);
-}
-
-.green-brdr {
-  border: 4px solid var(--primary-color);
-}
-
-.txt-green {
-  color: var(--primary-color);
-}
 
 .arrow {
   width: 41px;
 }
 
-/*Medidas Heights*/
-.xxs {
-  height: 162px;
-}
-.xs {
-  height: 212px;
-}
-.s {
-  height: 331px;
-}
-.m {
-  height: 350px;
-}
-.lg {
-  height: 474px;
-}
-.x {
-  height: 512px;
-}
-.xl {
-  height: 700px;
-}
-/*Medidas Heights*/
 html {
   scroll-behavior: smooth;
 }

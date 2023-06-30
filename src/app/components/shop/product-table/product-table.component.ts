@@ -13,7 +13,7 @@ export class ProductTableComponent implements OnInit{
 
   prendas: Prendas[] = [];
   tallas: string[] = ['S', 'M', 'L', 'XL'];
-  tiposPrenda: string[] = ['Buzo', 'Remera', 'Accesorio','Pantalon'];
+  tiposPrenda: string[] = ['Buzo', 'Remera', 'Chaqueta','Pantalon'];
   generos: string[] = ['Hombre', 'Mujer'];
   filtrosTalle: { [talle: string]: boolean } = {};
   filtrosTipoPrenda: { [tipo: string]: boolean } = {};
