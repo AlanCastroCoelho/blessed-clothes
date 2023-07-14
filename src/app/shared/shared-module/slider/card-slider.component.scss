@@ -1,5 +1,6 @@
-:host app-card {
-  @media screen and (max-width: 1555px) {
+app-card {
+
+  @media screen and (max-width: 1365px) {
     .card {
       border-radius: 0;
       height: 491px;
@@ -22,7 +23,7 @@
     }
   }
 
-  @media screen and (max-width: 1390px) {
+  @media screen and (max-width: 1150px) {
     .card {
       border-radius: 0;
       height: 470px;
@@ -41,7 +42,7 @@
     .price-cont {
       display: flex;
       align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
       width: 100%;
       padding: 0px 10px;
     }
@@ -57,7 +58,7 @@
     .cuotas-cont {
       display: flex;
       align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
       padding: 0px 10px;
     }
 
@@ -73,22 +74,19 @@
       width: 100%;
     }
 
-    .talles-cont-card {
-      height: fit-content;
-    }
-
     .close-bttn {
-      padding: 1px 0;
-      width: 39px;
-      height: 25px;
-    }
-
-    .error-message {
-      font-size: 11px;
+      padding: 1px;
+      width: 38px;
+      height: 24px;
     }
   }
 
-  @media screen and (max-width: 1132px) {
+  @media screen and (max-width: 1024px) {
+    .close-bttn {
+      width: 32px;
+      height: 20px;
+    }
+
     .card {
       border-radius: 0;
       height: fit-content;
@@ -111,72 +109,7 @@
     .price-cont {
       display: flex;
       align-items: center;
-      justify-content: start;
-      width: 100%;
-      padding: 0px 10px;
-    }
-
-    .price {
-      color: #000;
-      font-size: 16px;
-      line-height: 16px;
-      font-weight: 550;
-      margin: 0;
-    }
-
-    .cuotas-txt {
-      font-size: 12px;
-    }
-
-    .bttn {
-      width: 67px;
-      height: 35px;
-    }
-    .bttn-add {
-      width: 100%;
-    }
-    .talles-cont-card {
-      width: 100%;
-      height: fit-content;
-      padding: 10px;
-    }
-    .button {
-      width: 22px;
-      height: 22px;
-      font-size: 12px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      cursor: pointer;
-      margin-right: 8px;
-    }
-    .eye-bttn {
-      width: 16px;
-      height: 8px;
-    }
-  }
-  @media screen and (max-width: 890px) {
-    .card {
-      border-radius: 0;
-      height: fit-content;
-      width: 150px;
-      background: var(--grey-color);
-      transition: all 0.2s ease-out;
-    }
-
-    .img-container {
-      height: 200px;
-    }
-
-    .card-title-txt {
-      font-size: 18px;
-      font-weight: 400;
-      margin: 0;
-      padding: 8px 10px;
-    }
-
-    .price-cont {
-      display: flex;
-      align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
       width: 100%;
       padding: 0px 10px;
     }
@@ -213,11 +146,6 @@
       cursor: pointer;
       margin-right: 8px;
     }
-
-    .eye-bttn {
-      width: 19px;
-      height: 9px;
-    }
   }
 
   @media screen and (max-width: 768px) {
@@ -227,6 +155,11 @@
       width: 218px;
       background: var(--grey-color);
       transition: all 0.2s ease-out;
+    }
+
+    .close-bttn {
+      width: 39px;
+      height: 22px;
     }
 
     .img-container {
@@ -243,7 +176,7 @@
     .price-cont {
       display: flex;
       align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
       width: 100%;
       padding: 0px 10px;
     }

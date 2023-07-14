@@ -6,7 +6,7 @@ import { CalculadoraCuotasService } from 'src/app/services/calculadora-cuotas.se
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
-  styleUrls: ['./slider.component.css', './card-slider.component.css']
+  styleUrls: ['./slider.component.css', './card-slider.component.scss']
 })
 export class SliderComponent implements OnInit{
   prendasDestacadas: Prendas[] = [];

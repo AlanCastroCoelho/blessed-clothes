@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-product-table',
   templateUrl: './product-table.component.html',
-  styleUrls: ['./product-table.component.css','./card-product.component.css']
+  styleUrls: ['./product-table.component.css','./card-product.component.scss']
 })
 export class ProductTableComponent implements OnInit{
 
