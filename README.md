@@ -1,6 +1,6 @@
 # BlessedClothes - Ecommerce de Ropa Ficticio - Angular
 
-Esta aplicación, construida utilizando Angular, ofrece una gran experiencia para explorar y adquirir prendas de moda en un entorno virtual. Aprovechando las capacidades robustas de Angular, como servicios, componentes, enrutamiento y formularios reactivos, este proyecto proporciona una plataforma de compra en línea envolvente y amigable para los usuarios.
+Esta aplicación, construida utilizando Bootstrap y Angular, ofrece una gran experiencia para explorar y adquirir prendas de moda en un entorno virtual. Aprovechando las capacidades robustas de Angular, como servicios, componentes, enrutamiento y formularios reactivos, este proyecto proporciona una plataforma de compra en línea envolvente y amigable para los usuarios.
 
 ## Características Principales
 
