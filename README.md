@@ -18,7 +18,7 @@ Nuestra interfaz de usuario intuitiva facilita la navegación por la tienda. Exp
 
 ## Estructura del Código
 
-### Servicios
+## Servicios
 
 •	filtrosService: 
 Responsable de la lógica de filtrado de prendas basado en criterios como el tipo de prenda, el género y el tamaño (talle). Aplica filtros a una lista de prendas y devuelve la lista resultante.
@@ -36,38 +36,65 @@ Proporciona funcionalidades relacionadas con la gestión y obtención de datos d
 Ofrece funciones para la obtención y filtrado de datos de tiendas y sucursales basado en criterios geográficos.
 Componentes Destacados
 
-###	Componentes compartidos 
+## Componentes compartidos 
 
-•Cart-List (Carrito de Compras): 
+### Cart-List (Carrito de Compras) 
 Muestra de forma organizada los productos en el carrito. Usa el servicio "CartService" para obtener la lista de productos en el carrito, calcular el precio total y gestionar las operaciones de agregar y eliminar productos. También utiliza el "CalculadoraCuotasService" para calcular el precio de las cuotas dinámicamente.
 
-•	Slider: 
+<img src="./src/assets/Images/Github-Desc/Cart.jpg" alt="Cart-Component" width="400" height="auto">
+
+###	Slider 
 Utiliza la librería ngx-slick-carousel para crear un carrusel interactivo que muestra prendas en una disposición deslizante configurado con [config] e inicializado con (init). Utiliza el componente personalizado "app-card" para representar cada prenda en el carrusel.
 
-•	App-card: 
+<img src="./src/assets/Images/Github-Desc/Slider.jpg" alt="Slider-Component" width="900" height="auto">
+
+###	App-card 
 Muestra detalles del producto como imagen, nombre, precio, cuotas disponibles y opción de seleccionar tallas. Permite agregar productos al carrito utilizando FormGroup para capturar cantidad y talla seleccionada, y para gestionar datos como nombre, ID, imagen, precio, etc. Utiliza RouterLink para redirigir a la página de detalles del producto.
 
-### Main component
+<img src="./src/assets/Images/Github-Desc/Card1.jpg" alt="Card-Component" width="300" height="auto">
+<img src="./src/assets/Images/Github-Desc/Card2.jpg" alt="Card-Component" width="300" height="auto">
+
+## Main component
 Es el componente que se muestra al ingresar a la web, este componente contiene:
 
-•	Hero Section: Una primera impresión cautivadora para transmitir la identidad de la marca.
+###	Hero Section 
+Una primera impresión cautivadora para transmitir la identidad de la marca.
 
-•	Novedades: Utiliza el componente Slider descripto anteriormente para mostrar prendas nuevas en un carrusel interactivo.
+<img src="./src/assets/Images/Github-Desc/hero.jpg" alt="Card-Component" width="900" height="auto">
 
-•	Prendas: Permite a los usuarios explorar diferentes tipos de prendas y acceder a la sección de compra mediante el Routing de Angular.
+###	Novedades
+Utiliza el componente Slider descripto anteriormente para mostrar prendas nuevas en un carrusel interactivo.
 
-•	Redes: Muestra de las redes sociales de la Marca
+<img src="./src/assets/Images/Github-Desc/novedades.jpg" alt="Card-Component" width="900" height="auto">
 
+###	Prendas
+Permite a los usuarios explorar diferentes tipos de prendas y acceder a la sección de compra mediante el Routing de Angular.
 
+<img src="./src/assets/Images/Github-Desc/prendas.jpg" alt="Card-Component" width="900" height="auto">
 
-### Product-table 
+###	Newsletter
+Permite a los usuarios subscribirse al newsletter para recibir ofertas de la marca.
+
+<img src="./src/assets/Images/Github-Desc/newsletter.jpg" alt="Card-Component" width="900" height="auto">
+
+###	Redes
+Muestra de las redes sociales de la Marca.
+
+<img src="./src/assets/Images/Github-Desc/redes.jpg" alt="Card-Component" width="900" height="auto">
+
+## Product-table 
 Este componente se muestra al redirigirnos a la urlBase +‘/shop’ o al seleccionar Shop en el Nav.
 El componente Muestra una lista filtrable de prendas disponibles, permitiendo explorar y filtrar opciones según preferencias individuales. Trabaja en conjunto con el servicio de filtros para brindar una experiencia de compra personalizada y eficiente.
 
-### Single Product
+<img src="./src/assets/Images/Github-Desc/product-table.jpg" alt="Card-Component" width="900" height="auto">
+
+## Single Product
 Este componente se activa al hacer clic en una de las tarjetas (card.component), las cuales nos redirigen a la URL 'prenda/:tipo:id'. 
 Esta URL toma los parámetros 'tipo' e 'id' para poder mostrar el producto seleccionado de manera precisa. 
 Utilizamos ActivatedRoute para obtener los parámetros de la URL, como el ID y el tipo de prenda, lo que nos permite cargar la información específica de la prenda deseada. Para gestionar las selecciones de tallas y cantidades, así como para agregar prendas al carrito, emplea un formulario reactivo .Las validaciones proporcionadas por "Validators" aseguran la integridad de los datos ingresados. Además, para enriquecer la presentación de las vistas y mejorar la experiencia del usuario, integra la librería externa "ngx-slick-carousel".
+
+<img src="./src/assets/Images/Github-Desc/single-product1.jpg" alt="Card-Component" width="900" height="auto">
+<img src="./src/assets/Images/Github-Desc/single-product2.jpg" alt="Card-Component" width="900" height="auto">
 
 ## 📩 Contacto
 
