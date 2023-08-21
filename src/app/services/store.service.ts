@@ -15,7 +15,6 @@ export class StoreService {
   obtenerPorCiudad(nombreCiudad: string): CityData[] {
     const ciudadesFiltradas: CityData[] = [];
     this.stores.forEach(store => {
-      console.log('Iterating store:', store); // Agrega este console.log para verificar si el bucle se ejecuta correctamente
       const ciudad = store.ciudad.find(c => c.cNombre === nombreCiudad);
       if (ciudad) {
         ciudad.localidad.forEach(localidad => {

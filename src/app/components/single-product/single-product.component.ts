@@ -5,7 +5,8 @@ import { PrendasService } from 'src/app/services/prendas.service';
 import { ViewportScroller } from '@angular/common';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { CartService, PrecioPorProducto, Product } from 'src/app/services/cart.service';
+import { CartService} from 'src/app/services/cart.service';
+import { PrecioPorProducto, Product } from 'src/app/Interfaces/products';
 
 @Component({
   selector: 'app-single-product',

@@ -129,7 +129,9 @@ p {
 .trash-icon {
   cursor: pointer;
 }
-
+.total-price-cont {
+  flex-wrap: wrap;
+}
 .total-txt {
   font-size: 21px;
 }
@@ -137,7 +139,12 @@ p {
   font-size: 18px;
   font-weight: 500;
 }
-
+.quote-price {
+  color: rgb(103, 2, 2);
+  text-align: right;
+  flex-basis: 100%;
+  font-size: 15px;
+}
 .bttn {
   width: 100%;
   padding: 16px;

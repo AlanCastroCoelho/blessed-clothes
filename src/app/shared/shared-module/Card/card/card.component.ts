@@ -1,7 +1,8 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Prendas } from 'src/Models/Prendas';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { CartService, Product } from 'src/app/services/cart.service';
+import { CartService} from 'src/app/services/cart.service';
+import { Product } from 'src/app/Interfaces/products';
 
 @Component({
   selector: 'app-card',

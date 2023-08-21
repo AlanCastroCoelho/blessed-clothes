@@ -1,6 +1,8 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Prendas } from 'src/Models/Prendas';
-import { CartService, PrecioPorProducto, Product } from 'src/app/services/cart.service';
+import { Product } from 'src/app/Interfaces/products';
+import { CalculadoraCuotasService } from 'src/app/services/calculadora-cuotas.service';
+import { CartService} from 'src/app/services/cart.service';
 
 
 @Component({
@@ -12,18 +14,20 @@ import { CartService, PrecioPorProducto, Product } from 'src/app/services/cart.s
 export class CartListComponent implements OnInit {
   products: Product[] = [];
   precioTotalCarrito: number = 0;
+   precioCuota?: number;
+  constructor(private cartS: CartService,
+    private calcCuotS: CalculadoraCuotasService) {}
+  
+ ngOnInit() {
+  this.products = this.cartS.getPrendas();
+  this.precioTotalCarrito = this.cartS.getPrecioTotalCarrito();
+this.precioCuota = this.calcCuotS.calcularPrecioCuota(this.precioTotalCarrito, 6);
 
-  constructor(private cartS: CartService) {}
-  
-  async ngOnInit() {
-    this.cartS.carritoActualizado$.subscribe(async () => {
+    this.cartS.carritoActualizado.subscribe(() => {
       this.products = this.cartS.getPrendas();
-      this.precioTotalCarrito = await this.cartS.calcularPrecioTotalCarrito();
+      this.precioTotalCarrito =  this.cartS. getPrecioTotalCarrito();
+      this.precioCuota = this.calcCuotS.calcularPrecioCuota(this.precioTotalCarrito, 6);
     });
-  
-    this.products = this.cartS.getPrendas();
-    this.precioTotalCarrito = await this.cartS.calcularPrecioTotalCarrito();
-    
   }
 
   removeProduct(index: number) {

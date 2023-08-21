@@ -1,25 +1,24 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { PrecioPorProducto, Product } from '../Interfaces/products';
 
-export interface PrecioPorProducto {
-  id: number;
-  precioPorCantidad: number;
-}
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
   private prendas: Product[] = [];
-  private totalItems: number = 0;
+
+
   private readonly storageKey = 'cartItems';
-  totalItemsChanged = new Subject<void>();
+
+  private totalItems: number = 0;
+
   preciosPorProducto: PrecioPorProducto[] = [];
+
   precioTotalCarrito: number = 0;
+  carritoActualizado = new Subject<void>();
 
-  private carritoActualizado = new Subject<void>();
-
-  carritoActualizado$ = this.carritoActualizado.asObservable();
 
   constructor() {
     this.loadCartItems();
@@ -44,13 +43,13 @@ export class CartService {
 
   private updateTotalItems() {
     this.totalItems = this.prendas.reduce((total, prenda) => total + prenda.cantidad, 0);
+    this.carritoActualizado.next();
   }
 
   addPrenda(prenda: Product) {
     this.prendas.push(prenda);
     this.totalItems += prenda.cantidad;
     this.saveCartItems();
-    this.totalItemsChanged.next();
     this.calcularPreciosPorProducto();
     this.calcularPrecioTotalCarrito();
     this.carritoActualizado.next(); 
@@ -61,10 +60,9 @@ export class CartService {
     this.prendas.splice(index, 1);
     this.totalItems -= prenda.cantidad;
     this.saveCartItems();
-    this.totalItemsChanged.next();
     this.calcularPreciosPorProducto();
     this.calcularPrecioTotalCarrito();
-    this.carritoActualizado.next(); // Agregamos este evento para notificar los cambios en el carrito
+    this.carritoActualizado.next();
   }
   
   getPrendas(): Product[] {
@@ -99,20 +97,10 @@ export class CartService {
 
     this.preciosPorProducto = preciosPorProducto;
   }
-  public calcularPrecioTotalCarrito(): Promise<number> {
-    return new Promise((resolve) => {
+
+private calcularPrecioTotalCarrito() {
       const precioTotal = this.prendas.reduce((total, prenda) => total + (prenda.precio * prenda.cantidad), 0);
-      resolve(precioTotal);
-    });
+      this.precioTotalCarrito = precioTotal;
   } 
 }
 
-export interface Product {
-  id: number;
-  tipo: string;
-  nombre: string;
-  imgUrl: string;
-  talle: string;
-  precio: number;
-  cantidad: number;
-}
