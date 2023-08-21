@@ -71,8 +71,7 @@ export class SingleProductComponent implements OnInit {
     if (this.prendaId !== undefined) {
       this.prenda = this.prendasS.obtenerPrendaPorId(this.prendaId);
       const firstImageUrl = this.prenda?.imgUrl[0];
-      console.log(firstImageUrl);
-  
+
       this.productForm.patchValue({
         id: this.prendaId,
         tipo: this.prenda?.tipo,
@@ -83,7 +82,6 @@ export class SingleProductComponent implements OnInit {
       await this.asignarPrecio();
       this.preciosPorProducto = this.cartService.getPreciosPorProducto();
     }
-    console.log(this.prenda?.talles);
   }
 
   async asignarPrecio(): Promise<void> {
